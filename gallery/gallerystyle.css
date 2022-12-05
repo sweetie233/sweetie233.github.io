@@ -20,10 +20,15 @@ body {
 .hello {
   opacity: 1 !important;
 }
+main {
+  padding: 15px;
+  max-width: 100%;
+  margin: auto;
+}
 .full {
   position: fixed;
-  left: 0;
-  top: 0;
+  left: 0px;
+  top: 0px;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -35,12 +40,18 @@ body {
   display: grid;
 }
 .full .content img {
-  left: 50%;
-  transform: translate3d(0, 0, 0);
-  animation: zoomin 1s ease;
-  max-width: 100%;
-  max-height: 100%;
+  /* left: 50%; */
+  /*transform: translate3d(0, 0, 0);*/
+  animation-name: zoom;
+  animation-duration: 1s;
+  width: auto;
+  max-height: 90%;
   margin: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
 }
 .byebye {
   opacity: 0;
@@ -48,6 +59,36 @@ body {
 .byebye:hover {
   transform: scale(0.2) !important;
 }
+
+/*(background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.75); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+#bigimg{
+  animation-name: zoom;
+  animation-duration: 1s;
+  max-width: 90%;
+  max-height: 90%;
+  margin: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
 .gallery {
   display: grid;
   grid-column-gap: 8px;
@@ -86,6 +127,13 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
   }
 }
+
+@keyframes zoom {
+  from {transform: translate(-50%, -50%) scale(0.1)} 
+  to {transform: translate(-50%, -50%) scale(1)}   /*first left, second top*/
+}
+
+/*
 @-moz-keyframes zoomin {
   0% {
     max-width: 50%;
@@ -161,4 +209,4 @@ body {
     max-width: 100%;
     transform: rotate(0deg);
   }
-}
+}*/
