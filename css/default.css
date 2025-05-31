@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
 @font-face {
     /* font-properties */
     font-family: loveletters;
@@ -15,12 +17,135 @@
 	src:url('../font/fiolexgirl.ttf'); 
 }
 		
-body{margin:0;padding:0;background:#ffe;font-size:12px;overflow:auto}#mainDiv{width:100%;height:100%}#loveHeart{float:left;width:670px;height:625px}#garden{width:100%;height:100%}
-#elapseClock{text-align:right;font-size:30px;margin-top:10px;margin-bottom:10px;font-family:dateletters;}
-#words{font-family:"sans-serif";width:500px;font-size:28px;color:#666}
-#messages{display:none;margin-top:-30px;}
-#elapseClock .digit{font-family:"digit";font-size:30px}
-#loveu{padding:2px;font-size:28px;margin-top:10px;margin-right:93px;text-align:right;display:none}
-#loveu .signature{margin-top:5px;}
-.maintext{font-family:loveletters;white-space:nowrap;font-size:45px;}
-#clickSound{display:none}#code{float:left;width:440px;height:400px;color:#333;font-family:"Consolas","Monaco","Bitstream Vera Sans Mono","Courier New","sans-serif";font-size:12px}#code .string{color:#2a36ff}#code .keyword{color:#7f0055;font-weight:bold}#code .placeholder{margin-left:15px}#code .space{margin-left:7px}#code .comments{color:#3f7f5f}#copyright{margin-top:10px;text-align:center;width:100%;color:#666}#errorMsg{width:100%;text-align:center;font-size:24px;position:absolute;top:100px;left:0}#copyright a{color:#666}
+body {
+    margin:0;
+    padding:0;
+    background:#ffe;
+    font-size:12px;
+    overflow:auto
+}
+
+#mainDiv {
+    width:100%;
+    height:100%
+}
+    
+#loveHeart{
+    float: left;
+    width: 800px;
+    height: 755px
+}
+    
+#garden{
+    width:100%;height:100%
+}
+
+/* The setting for "days hours minutes second" */
+#elapseClock {
+    text-align: left;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: 80px;
+    font-family: 'Dancing Script', cursive;
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px;
+    /* font-weight: 300 */
+}
+/* The setting for digits */
+#elapseClock .digit {
+    font-family:"digit";
+    font-size: 60px;
+    font-weight: 600;
+}
+
+
+
+#words {
+    width: 800px;
+    /* font-size: 32px;
+    color: #666;
+    letter-spacing: 0.5px;
+    font-weight: 700; */
+}
+
+#messages {
+    display: none;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
+
+
+
+#loveu {
+    padding: 2px;
+    margin-top: -30px;
+    margin-right: 300px;
+    text-align: right;
+    display: none;
+}
+
+#loveu .signature {
+    margin-top: 5px;
+}
+
+.maintext {
+    font-family: 'Dancing Script', cursive;
+    white-space: nowrap;
+    font-size: 36px;
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: titleGlow 2s ease-in-out infinite alternate;
+    letter-spacing: 0.5px;
+    /* font-weight: 1000; */
+}
+
+@keyframes titleGlow {
+    from {
+        text-shadow: 0 0 10px rgba(255, 107, 107, 0.2),
+                     0 0 20px rgba(255, 107, 107, 0.1);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(255, 107, 107, 0.3),
+                     0 0 30px rgba(255, 107, 107, 0.2);
+    }
+}
+#clickSound {
+    display:none
+}
+
+#code {
+    float:left;
+    width:440px;
+    height:400px;
+    color:#333;
+    font-family:"Consolas","Monaco","Bitstream Vera Sans Mono","Courier New","sans-serif";
+    font-size:12px
+}
+
+#code .string {
+    color:#2a36ff
+}
+
+#code .keyword {
+    color:#7f0055;
+    /* font-weight:bold */
+}
+
+#code .placeholder{margin-left:15px}
+
+#code .space{margin-left:7px}
+
+#code .comments{color:#3f7f5f}
+
+#copyright{margin-top:10px;text-align:center;width:100%;color:#666}
+
+#errorMsg{width:100%;text-align:center;font-size:24px;position:absolute;top:100px;left:0}
+
+#copyright a{color:#666}

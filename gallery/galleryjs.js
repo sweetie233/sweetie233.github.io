@@ -1,6 +1,9 @@
 var gallery = document.querySelector('#galleryid');
 var getVal = function (elem, style) { return parseInt(window.getComputedStyle(elem).getPropertyValue(style)); };
 var getHeight = function (item) { return item.querySelector('.content').getBoundingClientRect().height; };
+
+// Adjusts each .gallery-item's vertical span (gridRowEnd) based on its content height
+// Creates a Pinterest-like layout with rows of variable height but grid-aligned
 var resizeAll = function () {
     var altura = getVal(gallery, 'grid-auto-rows');
     var gap = getVal(gallery, 'grid-row-gap');
@@ -18,21 +21,30 @@ String.prototype.format = function() {
     return formatted;
 };
 
+// Adds a byebye class to all <img> initially (maybe hides them)
+// When each image loads, it recalculates the corresponding grid row span for layout consistency
+// Removes byebye to reveal the image
 gallery.querySelectorAll('img').forEach(function (item) {
     item.classList.add('byebye');
+
+    function onLoadHandler() {
+        var altura = getVal(gallery, 'grid-auto-rows');
+        var gap = getVal(gallery, 'grid-row-gap');
+        var gitem = item.closest('.gallery-item');
+        gitem.style.gridRowEnd = "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
+        item.classList.remove('byebye');
+    }
+
     if (item.complete) {
         console.log(item.src);
+        onLoadHandler();  // execute immediately
+    } else {
+        item.addEventListener('load', onLoadHandler);
     }
-    else {
-        item.addEventListener('load', function () {
-            var altura = getVal(gallery, 'grid-auto-rows');
-            var gap = getVal(gallery, 'grid-row-gap');
-            var gitem = item.parentElement.parentElement;
-            gitem.style.gridRowEnd = "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
-            item.classList.remove('byebye');
-        });
-    }
+
 });
+
+// Ensures layout is recalculated if the window resizes
 window.addEventListener('resize', resizeAll);
 var bigimg = document.getElementById('bigimg');
 var modal = document.getElementById("bgmodal");
