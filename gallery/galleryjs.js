@@ -44,6 +44,7 @@ gallery.querySelectorAll('img').forEach(function (item) {
 
 });
 
+
 // Ensures layout is recalculated if the window resizes
 window.addEventListener('resize', resizeAll);
 var bigimg = document.getElementById('bigimg');
@@ -51,22 +52,27 @@ var modal = document.getElementById("bgmodal");
 //var abc = gallery.querySelectorAll('.gallery-item');
 gallery.querySelectorAll('.gallery-item').forEach(function (item) {
     item.addEventListener('click', function () {  
-		modal.style.display = "block";
-		bigimg.src = this.childNodes[1].childNodes[0].src;
-		
-		/*var rect = item.getBoundingClientRect();
-		// these are relative to the viewport, i.e. the window
-		var top_center = rect.top + rect.height/2;
-		var left_center = rect.left + rect.width/2;
-		var bigrect = bigimg.getBoundingClientRect();
-		var leftshift = left_center - (bigrect.left + bigrect.width/2);
-		var topshift = top_center - (bigrect.top + bigrect.height/2);
+        modal.style.display = "block";
+        // bigimg.src = this.childNodes[1].childNodes[0].src;
+        bigimg.src = this.querySelector("img").src;
+        
+        /*var rect = item.getBoundingClientRect();
+        // these are relative to the viewport, i.e. the window
+        var top_center = rect.top + rect.height/2;
+        var left_center = rect.left + rect.width/2;
+        var bigrect = bigimg.getBoundingClientRect();
+        var leftshift = left_center - (bigrect.left + bigrect.width/2);
+        var topshift = top_center - (bigrect.top + bigrect.height/2);
         //item.classList.toggle('full');     
-		transtring = "translate({0}px, {1}px)".format(leftshift.toString(), topshift.toString());
-		console.log(transtring);
-		bigimg.style.transform = transtring;*/
+        transtring = "translate({0}px, {1}px)".format(leftshift.toString(), topshift.toString());
+        console.log(transtring);
+        bigimg.style.transform = transtring;*/
     });
 });
 modal.onclick = function() { 
-  this.style.display = "none";
+this.style.display = "none";
 }
+
+  
+
+

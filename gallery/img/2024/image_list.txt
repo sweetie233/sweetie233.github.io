@@ -1,0 +1,14 @@
+<img src="../gallery/img/2024/2024-04-20-21-14-37-693.jpg" alt="Gallery Image" onclick="openModal(this)">
+<img src="../gallery/img/2024/2024-04-20-21-20-09-252.jpg" alt="Gallery Image" onclick="openModal(this)">
+<img src="../gallery/img/2024/2024-04-20-21-20-47-586.jpg" alt="Gallery Image" onclick="openModal(this)">
+<img src="../gallery/img/2024/2024-06-29-12-39-05-771.jpg" alt="Gallery Image" onclick="openModal(this)">
+<img src="../gallery/img/2024/2024-06-29-13-37-14-457.jpg" alt="Gallery Image" onclick="openModal(this)">
+<img src="../gallery/img/2024/IMG_20240127_195256.jpg" alt="Gallery Image" onclick="openModal(this)">
+<img src="../gallery/img/2024/IMG_20240427_145942.jpg" alt="Gallery Image" onclick="openModal(this)">
+<img src="../gallery/img/2024/IMG_20240427_150752.jpg" alt="Gallery Image" onclick="openModal(this)">
+<img src="../gallery/img/2024/IMG_20240427_151304.jpg" alt="Gallery Image" onclick="openModal(this)">
+<img src="../gallery/img/2024/IMG_20240427_151901.jpg" alt="Gallery Image" onclick="openModal(this)">
+<img src="../gallery/img/2024/IMG_20240427_153539.jpg" alt="Gallery Image" onclick="openModal(this)">
+<img src="../gallery/img/2024/IMG_20240608_122830.jpg" alt="Gallery Image" onclick="openModal(this)">
+<img src="../gallery/img/2024/IMG_20240608_141956.jpg" alt="Gallery Image" onclick="openModal(this)">
+<img src="../gallery/img/2024/IMG_20240608_141958.jpg" alt="Gallery Image" onclick="openModal(this)">

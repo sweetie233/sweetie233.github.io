@@ -1,0 +1,5 @@
+<img src="../gallery/img/2025/2025-01-24-19-14-25-302.jpg" alt="Gallery Image" onclick="openModal(this)">
+<img src="../gallery/img/2025/2025-01-25-22-11-10-927.jpg" alt="Gallery Image" onclick="openModal(this)">
+<img src="../gallery/img/2025/2025-01-25-22-11-42-683.jpg" alt="Gallery Image" onclick="openModal(this)">
+<img src="../gallery/img/2025/2025-01-25-22-12-08-618.jpg" alt="Gallery Image" onclick="openModal(this)">
+<img src="../gallery/img/2025/2025-01-31-19-19-48-799.jpg" alt="Gallery Image" onclick="openModal(this)">

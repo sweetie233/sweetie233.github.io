@@ -1,0 +1,4 @@
+<img src="../gallery/img/2023/2023-10-07-15-36-24-578.jpg" alt="Gallery Image" onclick="openModal(this)">
+<img src="../gallery/img/2023/IMG_20230128_105531_112442.jpg" alt="Gallery Image" onclick="openModal(this)">
+<img src="../gallery/img/2023/IMG_20230128_143018_112324.jpg" alt="Gallery Image" onclick="openModal(this)">
+<img src="../gallery/img/2023/IMG_20230128_194510_112105.jpg" alt="Gallery Image" onclick="openModal(this)">
